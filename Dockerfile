@@ -15,5 +15,6 @@ RUN cd /Net-ISP-Balance && \
     ./Build install
 
 COPY balance.conf /etc/network/balance.conf
+COPY script/balance.sh /balance.sh
 
-ENTRYPOINT ["load_balance.pl"]
+CMD ["/balance.sh"]
